@@ -7,7 +7,7 @@ from sklearn.metrics import f1_score
 import joblib
 
 # Открываем файл
-df = pd.read_csv('../datasets/df.csv')
+df = pd.read_csv('datasets/df.csv')
 
 # Разделяем признаки и целевую переменную
 X = df.drop('discount_applied', axis=1)
@@ -56,6 +56,6 @@ joblib.dump(label_encoder, 'label_encoder.pkl')
 y_test = pd.DataFrame({'y_test': y_test})
 
 # Сохраняем преобразованные данные
-X_train.to_csv('../datasets/X_train.csv', index=False)
-X_test.to_csv('../datasets/X_test.csv', index=False)
-y_test.to_csv('../datasets/y_test.csv', index=False)
+X_train.to_csv('datasets/X_train.csv', index=False)
+X_test.to_csv('datasets/X_test.csv', index=False)
+y_test.to_csv('datasets/y_test.csv', index=False)
