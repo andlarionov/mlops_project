@@ -4,8 +4,8 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 import numpy as np
 
-y_test = pd.read_csv('../datasets/y_test.csv')['y_test'].values
-X_test = pd.read_csv('../datasets/X_test.csv')
+y_test = pd.read_csv('/datasets/y_test.csv')['y_test'].values
+X_test = pd.read_csv('/datasets/X_test.csv')
 
 @pytest.fixture(scope='module')
 def load_model_and_preprocessors():
