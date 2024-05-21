@@ -9,10 +9,10 @@ X_test = pd.read_csv('datasets/X_test.csv')
 
 @pytest.fixture(scope='module')
 def load_model_and_preprocessors():
-    model = joblib.load('../scr/model.pkl')
-    scaler = joblib.load('../scr/scaler.pkl')
-    ordinal = joblib.load('../scr/ordinal_encoder.pkl')
-    label_encoder = joblib.load('../scr/label_encoder.pkl')
+    model = joblib.load('scr/model.pkl')
+    scaler = joblib.load('scr/scaler.pkl')
+    ordinal = joblib.load('scr/ordinal_encoder.pkl')
+    label_encoder = joblib.load('scr/label_encoder.pkl')
     return model, scaler, ordinal, label_encoder
 
 @pytest.fixture
