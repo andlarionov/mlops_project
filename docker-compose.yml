@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: my_app
+    ports:
+      - "8000:8000"
+    command: python scr/app.py
+
+  test:
+    build: .
+    container_name: my_app_tests
+    command: pytest tests/

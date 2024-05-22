@@ -23,7 +23,7 @@ jobs:
 
     - name: Configure DVC remote
       run: |
-        dvc remote add -d final_project ${{ secrets.DVC_REMOTE_URL }}
+        dvc remote add -d final_project_mlops ${{ secrets.DVC_REMOTE_URL }}
         echo "${{ secrets.GDRIVE_CREDENTIALS_DATA }}" > gdrive_credentials.json
         dvc remote modify final_project --local gdrive_credentials_file gdrive_credentials.json
 
