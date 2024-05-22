@@ -28,6 +28,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: data_creation
+      run: |
+        python3 scr/data_creation.py
+    - name: yrain_model
+      run: |
+        python3 scr/train_model.py
+    - name: run app
+      run: |
+        streamlit app.py
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
