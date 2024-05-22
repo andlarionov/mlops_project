@@ -34,9 +34,9 @@ jobs:
     - name: train_model
       run: |
         python3 scr/train_model.py
-    - name: run streamlit app
+    - name: app.py
       run: |
-        streamlit run scr/app.py
+        python3 scr/app.py
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
