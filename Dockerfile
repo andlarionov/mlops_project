@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 # Копируем файлы с исходным кодом и requirements.txt в контейнер
 COPY scr/ ./scr
 COPY tests/ ./tests
+COPY datasets/ ./datasets
 COPY requirements.txt .
 
 # Устанавливаем зависимости Python
