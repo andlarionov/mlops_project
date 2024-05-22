@@ -31,12 +31,12 @@ jobs:
     - name: data_creation
       run: |
         python3 scr/data_creation.py
-    - name: yrain_model
+    - name: train_model
       run: |
         python3 scr/train_model.py
-    - name: run app
+    - name: run streamlit app
       run: |
-        streamlit app.py
+        streamlit run scr/app.py
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
