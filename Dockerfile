@@ -1,5 +1,4 @@
 # Используем официальный Python образ
-# Используем официальный Python образ
 FROM python:3.8
 
 # Устанавливаем рабочую директорию внутри контейнера
@@ -18,8 +17,5 @@ COPY requirements.txt .
 # Устанавливаем зависимости Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Устанавливаем DVC
-RUN pip install dvc
-
 # Устанавливаем команду для запуска приложения
-CMD ["streamlit", "run", "src/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "scr/app.py", "--server.port=8501", "--server.address=0.0.0.0"]

@@ -5,8 +5,8 @@ services:
     build: .
     container_name: my_app
     ports:
-      - "8000:8000"
-    command: python scr/app.py
+      - "8501:8501"  # Порт для Streamlit
+    command: streamlit run scr/app.py --server.port=8501 --server.address=0.0.0.0
 
   test:
     build: .
