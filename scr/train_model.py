@@ -35,8 +35,8 @@ X_test[['gender', 'category', 'size', 'subscription_status']] = ordinal.transfor
 
 # Обучаем модель
 model = RandomForestClassifier(
-    n_estimators=200, max_depth=None, min_samples_split=10, 
-    min_samples_leaf=5, bootstrap=True, class_weight='balanced', 
+    n_estimators=200, max_depth=None, min_samples_split=10,
+    min_samples_leaf=5, bootstrap=True, class_weight='balanced',
     random_state=42
 )
 model.fit(X_train, y_train)
