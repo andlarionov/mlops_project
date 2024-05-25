@@ -34,10 +34,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 # Team Members
 
-Team 14:
+Team:
 - Maxim Bakanov: Contributed to the development of the train_model.py script, focusing on the training process of the machine learning model.
 - Artem Dashkov: Responsible for setting up the project structure and managing dependencies using pipenv or similar tools.
 - Artur Mironov: Implemented the data preprocessing steps in data_creation.py, including loading, cleaning, and transforming the dataset.
 - Anastasia Tolstolutskaya: Assisted in creating and organizing datasets, ensuring that they were properly formatted and stored for both training and testing purposes.
-- Andrey Larionov: Worked on the core logic of the application, including the integration of the machine learning model and handling user inputs through Streamlit.
+- Andrey Larionov: Worked on the core logic of the application, including the integration of the machine learning model and handling user inputs through Streamlit. Implemented the application as a Docker image. Built the application.
 - Kirill Kochnev: Developed the app.py file, integrating the frontend of the application with Streamlit and ensuring a smooth user experience.
