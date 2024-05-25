@@ -2,8 +2,8 @@ import pytest
 import joblib
 import pandas as pd
 
-y_test = pd.read_csv('datasets/y_test.csv')['y_test'].values
-X_test = pd.read_csv('datasets/X_test.csv')
+y_test = pd.read_csv('datasets/y_test.csv')['y_test'].values  # for Linux
+X_test = pd.read_csv('datasets/X_test.csv')   # for Linux
 
 
 @pytest.fixture(scope='module')
