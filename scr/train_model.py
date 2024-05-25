@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder, LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
@@ -35,7 +34,11 @@ X_test[['gender', 'category', 'size', 'subscription_status']] = ordinal.transfor
 )
 
 # Обучаем модель
-model = RandomForestClassifier()
+model = RandomForestClassifier(
+    n_estimators=200, max_depth=None, min_samples_split=10,
+    min_samples_leaf=5, bootstrap=True, class_weight='balanced',
+    random_state=42
+)
 model.fit(X_train, y_train)
 
 # Предсказание на тестовом наборе
@@ -51,7 +54,7 @@ joblib.dump(scaler, 'scaler.pkl')
 joblib.dump(ordinal, 'ordinal_encoder.pkl')
 joblib.dump(label_encoder, 'label_encoder.pkl')
 
-# Преобразуем целевой признак в pd для сохранения в формате csv 
+# Преобразуем целевой признак в pd для сохранения в формате csv
 # и последующего испоззования в тестировании
 y_test = pd.DataFrame({'y_test': y_test})
 

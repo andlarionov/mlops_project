@@ -1,6 +1,6 @@
 import pandas as pd
 
-#Открываем файл
+# Открываем файл
 df = pd.read_csv('datasets/shopping_trends.csv')
 
 df.columns = df.columns.str.lower().str.replace(' ', '_')
