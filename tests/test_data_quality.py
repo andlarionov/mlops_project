@@ -1,4 +1,4 @@
-import os # use only on the OS Windows
+import os  # use only on the OS Windows
 import pytest
 import pandas as pd
 
@@ -14,7 +14,10 @@ def test_data_age(input_dataset):
     count_age = 0
     for age in input_dataset['age']:
         count_age += 1
-        assert isinstance(age, int), f"Value of [age] in string {count_age} is empty or is not integer, value: {age}"
+        assert isinstance(age, int), (
+            f"Value of [age] in string {count_age} is empty or is not integer,"
+            f"value: {age}"
+        )
 
 
 def test_data_gender(input_dataset):
@@ -22,8 +25,11 @@ def test_data_gender(input_dataset):
     gender_list = ['Male', 'Female']
     for gender in input_dataset['gender']:
         count_gender += 1
-        assert gender in gender_list, \
-            f"Value of [gender] in string {count_gender} is not 'Male' or 'Female', value: {gender}"
+        assert gender in gender_list, (
+            f"Value of [gender] in string {count_gender} "
+            f"is not 'Male' or 'Female',"
+            f"value: {gender}"
+        )
 
 
 def test_data_category(input_dataset):
@@ -31,8 +37,9 @@ def test_data_category(input_dataset):
     category_list = ['Clothing', 'Footwear', 'Outerwear', 'Accessories']
     for category in input_dataset['category']:
         count_category += 1
-        assert category in category_list,\
-            f"Value of [category] in string {count_category} is not {category_list}, value: {category}"
+        assert category in category_list, \
+            (f"Value of [category] in string {count_category} "
+             f"is not {category_list}, value: {category}")
 
 
 def test_data_size(input_dataset):
@@ -40,8 +47,10 @@ def test_data_size(input_dataset):
     size_list = ['XS', 'S', 'L', 'M', 'XL', 'XXL', 'XXXL']
     for size in input_dataset['size']:
         count_size += 1
-        assert size in size_list,\
-            f"Value of [category] in string {count_size} is not {size_list}, value: {size}"
+        assert size in size_list, \
+            (f"Value of [category] in string {count_size} "
+             f"is not {size_list}, "
+             f"value: {size}")
 
 
 def test_data_subscription_status(input_dataset):
@@ -49,8 +58,9 @@ def test_data_subscription_status(input_dataset):
     subscription_list = ['Yes', 'No']
     for subscription_status in input_dataset['subscription_status']:
         count_subscription_status += 1
-        assert subscription_status in subscription_list,\
-            (f"Value of [subscription_status] in string {count_subscription_status} is not {subscription_list}, "
+        assert subscription_status in subscription_list, \
+            (f"Value of [subscription_status] in string "
+             f"{count_subscription_status} is not {subscription_list}, "
              f"value: {subscription_status}")
 
 
@@ -60,5 +70,5 @@ def test_data_discount_applied(input_dataset):
     for discount_applied in input_dataset['discount_applied']:
         count_discount_applied += 1
         assert discount_applied in discount_applied_list, \
-            (f"Value of [subscription_status] in string {count_discount_applied} is not {discount_applied_list}, "
-             f"value: {discount_applied}")
+            (f"Val of [subscription_status] in string {count_discount_applied}"
+             f"is not {discount_applied_list}, val: {discount_applied}")
